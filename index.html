@@ -1,66 +1,18 @@
-<img src="myphoto.jpg" alt="Md Shohil Aktar">
-<img src="images/myphoto.jpg" alt="Md Shohil Aktar">
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Md Shohil Aktar</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-            text-align: center;
-        }
-        header {
-            background: #1a1a1a;
-            color: white;
-            padding: 15px 20px;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav ul li a:hover {
-            color: #f4a261;
-        }
-        section {
-            padding: 80px 20px;
-            min-height: 100vh;
-        }
-        #photo img {
-            width: 150px;
-            border-radius: 50%;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Header Section -->
     <header>
         <h1>Md Shohil Aktar</h1>
         <nav>
             <ul>
-                <li><a href="#photo">Photo</a></li>
                 <li><a href="#research">Research</a></li>
                 <li><a href="#teaching">Teaching</a></li>
                 <li><a href="#talks">Talks</a></li>
@@ -71,52 +23,82 @@
         </nav>
     </header>
 
+    <!-- Photo Section -->
     <section id="photo">
-        <h2>My Photo</h2>
-        <img src="myphoto.jpg" alt="Md Shohil Aktar">
+        <h2>About Me</h2>
+        <img src="myphoto.jpg" alt="Md Shohil Aktar" style="width: 200px; border-radius: 10px;">
+        <p>Welcome to my personal webpage! I am an MSc Physics graduate with research experience in electronic devices and circuits.</p>
     </section>
 
+    <!-- Research Section -->
     <section id="research">
         <h2>Research</h2>
-        <p>Details about research projects and publications.</p>
+        <p>Below is a summary of my research experience and publications.</p>
+
+        <div class="research-item">
+            <h3>Title of Your Research</h3>
+            <p><strong>Institution:</strong> Your University/Institution Name</p>
+            <p><strong>Duration:</strong> Start Date – End Date</p>
+            <p><strong>Supervisor:</strong> Name of Your Research Supervisor</p>
+            <p><strong>Description:</strong> Briefly describe your research work, objectives, and findings.</p>
+        </div>
+
+        <div class="research-item">
+            <h3>Another Research Project</h3>
+            <p><strong>Institution:</strong> Another University/Institution</p>
+            <p><strong>Duration:</strong> Start Date – End Date</p>
+            <p><strong>Supervisor:</strong> Supervisor's Name</p>
+            <p><strong>Description:</strong> Summary of this research project.</p>
+        </div>
+
+        <h3>Publications</h3>
+        <ul>
+            <li><strong>Paper Title 1</strong> – Journal/Conference Name, Year, DOI</li>
+            <li><strong>Paper Title 2</strong> – Journal/Conference Name, Year, DOI</li>
+            <li><strong>Paper Title 3</strong> – Journal/Conference Name, Year, DOI</li>
+        </ul>
     </section>
 
+    <!-- Teaching Section -->
     <section id="teaching">
         <h2>Teaching</h2>
-        <p>Information about teaching experience and courses.</p>
+        <p>Details about teaching experience and courses taught.</p>
     </section>
 
+    <!-- Talks Section -->
     <section id="talks">
         <h2>Talks</h2>
-        <p>List of presentations and seminars.</p>
+        <p>Information about invited talks and presentations.</p>
     </section>
 
+    <!-- Software Section -->
     <section id="software">
         <h2>Software</h2>
-        <p>Projects and tools developed.</p>
+        <p>Details about software and tools developed.</p>
     </section>
 
+    <!-- People Section -->
     <section id="people">
         <h2>People</h2>
-        <p>Collaborators and team members.</p>
+        <p>Collaborators, research group, and students.</p>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:shohilahms.3120@gmail.com">shohilahms.3120@gmail.com</a></p>
-        <p><a href="https://www.hku.hk" target="_blank">The University of Hong Kong</a></p>
-        <p><a href="https://www.researchgate.net/profile/Md-Aktar-6/research" target="_blank">ResearchGate</a></p>
-        <p><a href="https://scholar.google.com" target="_blank">Google Scholar</a></p>
-        <p><a href="https://orcid.org/0009-0003-8253-4531" target="_blank">ORCID</a></p>
-        <form action="submit_form.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+        <p>Connect with me:</p>
+        <ul>
+            <li><a href="https://www.hku.hk" target="_blank">The University of Hong Kong</a></li>
+            <li><a href="https://www.researchgate.net" target="_blank">ResearchGate</a></li>
+            <li><a href="https://scholar.google.com" target="_blank">Google Scholar</a></li>
+            <li><a href="https://orcid.org" target="_blank">ORCID</a></li>
+        </ul>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Md Shohil Aktar. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
