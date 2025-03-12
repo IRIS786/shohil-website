@@ -1,0 +1,132 @@
+<link rel="stylesheet" href="styles.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Shohil Aktar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        header {
+            background: #1a1a1a;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f4a261;
+        }
+        section {
+            padding: 80px 20px;
+            min-height: 100vh;
+        }
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+        }
+        #contact input, #contact textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #contact button {
+            background: #1a1a1a;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        #contact button:hover {
+            background: #f4a261;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Md Shohil Aktar</h1>
+        <nav>
+            <ul>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#talks">Talks</a></li>
+                <li><a href="#software">Software</a></li>
+                <li><a href="#people">People</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="research">
+        <h2>Research</h2>
+        <p>Details about research projects and publications.</p>
+    </section>
+
+    <section id="teaching">
+        <h2>Teaching</h2>
+        <p>Information about teaching experience and courses.</p>
+    </section>
+
+    <section id="talks">
+        <h2>Talks</h2>
+        <p>List of presentations and seminars.</p>
+    </section>
+
+    <section id="software">
+        <h2>Software</h2>
+        <p>Projects and tools developed.</p>
+    </section>
+
+    <section id="people">
+        <h2>People</h2>
+        <p>Collaborators and team members.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:shohilahms.3120@gmail.com">shohilahms.3120@gmail.com</a></p>
+        <p><a href="https://www.hku.hk" target="_blank">The University of Hong Kong</a></p>
+        <p><a href="https://www.researchgate.net/profile/Md-Aktar-6/research" target="_blank">ResearchGate</a></p>
+        <p><a href="https://scholar.google.com" target="_blank">Google Scholar</a></p>
+        <p><a href="https://orcid.org/0009-0003-8253-4531" target="_blank">ORCID</a></p>
+        <form action="submit_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+</body>
+</html>
