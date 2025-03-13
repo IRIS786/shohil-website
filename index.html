@@ -1,3 +1,6 @@
+Here is the modified HTML code with the "Physics Visualization" section removed:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,11 +79,6 @@
         .contact-info a:hover {
             background: #1e7e34; /* Even darker green */
         }
-        #canvas-container {
-            width: 100%;
-            height: 400px;
-            margin: 20px 0;
-        }
     </style>
 </head>
 <body>
@@ -94,12 +92,6 @@
             <a href="https://orcid.org/0009-0003-8253-4531">ORCID</a>
         </div>
     </header>
-
-    <!-- Physics Visualization -->
-    <div class="section">
-        <h2>Physics Visualization</h2>
-        <div id="canvas-container"></div>
-    </div>
 
     <!-- Personal Information -->
     <div class="section">
@@ -196,7 +188,7 @@
                     <li>Quantifying Cellular Stiffness and Elasticity through Atomic Force Microscopy: A Biophysical Approach (June 2024)</li>
                     <li>How Can Quantum Gravity Help Explain the Origin of the Universe? (June 2024)</li>
                     <li>The Arrow of Time: Understanding Its Unidirectional Nature Through Mathematics and Physics (June 2024)</li>
-                    <li>Is String Theory Correct? An Examination of its Mathematical Foundations and Physical Implications (June 2024)</li>
+                    <li >Is String Theory Correct? An Examination of its Mathematical Foundations and Physical Implications (June 2024)</li>
                     <li>Unification of the Universe's Forces (June 2024)</li>
                     <li>Are There Parallel Universes? An Exploration of Multiverse Theories and Evidence (May 2024)</li>
                     <li>Exploratory Models and Speculative Hypotheses in the Study of Dark Matter and Dark Energy (February 2024)</li>
@@ -258,7 +250,7 @@
         <h2>Conferences and Seminars</h2>
         <ul>
             <li><strong>Certification for Design and Application of SPSS Software:</strong> Eudoxia Research Centre</li>
-            <li><strong>Attendance Certification for Nanotechnology Lecture:</strong> Nehru Science Centre , Mumbai (Topic: Unleashing the Power of Nanotechnology)</li>
+            <li><strong>Attendance Certification for Nanotechnology Lecture:</strong> Nehru Science Centre, Mumbai (Topic: Unleashing the Power of Nanotechnology)</li>
             <li><strong>Certificate for Participation in National Intellectual Property Awareness Mission</strong></li>
             <li><strong>Certificate for Participation in Two National Level Seminars on Recent Trends in Physics:</strong> Acharya Prafulla Chandra College</li>
             <li><strong>Certificate for One-Day National Seminar on Nanoscience and Astrophysics:</strong> Acharya Prafulla Chandra College</li>
@@ -294,7 +286,7 @@
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth, 400);
-        document.getElementById('canvas-container').appendChild(renderer.domElement);
+        document.body.appendChild(renderer.domElement);
 
         const geometry = new THREE.SphereGeometry(1, 32, 32);
         const material = new THREE.MeshBasicMaterial({ color: 0x0077ff });
