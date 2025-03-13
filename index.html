@@ -6,216 +6,214 @@
     <title>Md Shohil Aktar - CV</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            padding: 0;
+            font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
             color: #333;
+            margin: 0;
+            padding: 20px;
         }
-        h1, h2, h3 {
-            color: #333;
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #007BFF;
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #007BFF;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 5px;
+            margin-top: 0;
         }
         .section {
-            background: #fff;
+            background: white;
             margin: 20px 0;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        .section h2 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-        }
-        .contact-info a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        .skills-list, .publications-list, .certifications-list {
+        ul {
             list-style-type: none;
             padding: 0;
         }
-        .skills-list li, .publications-list li, .certifications-list li {
-            background: #f9f9f9;
-            margin: 5px 0;
-            padding: 10px;
-            border-radius: 4px;
+        ul li {
+            margin-bottom: 10px;
         }
-        #animation {
-            display: block;
-            margin: 20px auto;
-            border: 1px solid #ccc;
+        ul li strong {
+            color: #007BFF;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .contact-info a {
+            color: white;
+            background: #0056b3;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .contact-info a:hover {
+            background: #004080;
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 </head>
 <body>
-    <div class="section">
+    <header>
         <h1>Md Shohil Aktar</h1>
-        <p>MSc Physics Graduate | Researcher | Aspiring PhD Candidate</p>
-    </div>
+        <p>Physics Researcher | MSc Graduate | Aspiring PhD Candidate</p>
+        <div class="contact-info">
+            <a href="mailto:shohilahms.3120@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/md-shohil-aktar-74a8aa207">LinkedIn</a>
+            <a href="https://www.researchgate.net/profile/Md-Aktar-6/research">ResearchGate</a>
+            <a href="https://orcid.org/0009-0003-8253-4531">ORCID</a>
+        </div>
+    </header>
 
-    <div class="section contact-info">
-        <h2>Contact Information</h2>
-        <p><strong>Phone:</strong> (+91) 7478615259</p>
-        <p><strong>Email:</strong> 
-            <a href="mailto:shohilahms.3120@gmail.com">shohilahms.3120@gmail.com</a>, 
-            <a href="mailto:mdshohilaktar@yahoo.com">mdshohilaktar@yahoo.com</a>, 
-            <a href="mailto:shohilahms.3120@outlook.com">shohilahms.3120@outlook.com</a>
-        </p>
-        <p><strong>Facebook:</strong> <a href="https://www.facebook.com/sk.m.aktar.1?mibextid=ZbWKwL">Facebook Profile</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/md-shohil-aktar-74a8aa207">LinkedIn Profile</a></p>
-        <p><strong>ORCID:</strong> <a href="https://orcid.org/0009-0003-8253-4531">ORCID Profile</a></p>
-        <p><strong>ResearchGate:</strong> <a href="https://www.researchgate.net/profile/Md-Aktar-6/research">ResearchGate Profile</a></p>
-        <p><strong>Address:</strong> Kamlabari Talgachhi, Harishchandrapur, Malda, West Bengal, India, 732125</p>
-    </div>
-
+    <!-- Personal Information -->
     <div class="section">
-        <h2>About Me</h2>
-        <p>I am a recent MSc Physics graduate with a full scholarship from the American Physical Society's Wiki Scientist course, demonstrating my commitment to scientific research and communication. With an ORCID of 0009-0003-8253-4531, my work includes 2 years of research experience and publications in the field of physics. Although I declined a PhD offer in lipid nanostructures from the University of Central Lancashire, I am actively seeking a PhD position that aligns with my research interests and ambition to contribute to groundbreaking scientific discoveries.</p>
-    </div>
-
-    <div class="section">
-        <h2>Physics Animation</h2>
-        <p>Below is a simple animation demonstrating a bouncing ball, illustrating the concept of gravity and motion.</p>
-        <div id="animation"></div>
-    </div>
-
-    <script>
-        let ball;
-        let gravity = 0.2;
-        let bounceFactor = 0.7;
-
-        function setup() {
-            let canvas = createCanvas(400, 400);
-            canvas.parent('animation');
-            ball = new Ball();
-        }
-
-        function draw() {
-            background(220);
-            ball.update();
-            ball.display();
-        }
-
-        class Ball {
-            constructor() {
-                this.x = width / 2;
-                this.y = height / 2;
-                this.size = 30;
-                this.ySpeed = 0;
-            }
-
-            update() {
-                this.ySpeed += gravity;
-                this.y += this.ySpeed;
-
-                if (this.y + this.size / 2 >= height) {
-                    this.y = height - this.size / 2;
-                    this.ySpeed *= -bounceFactor;
-                }
-            }
-
-            display() {
-                fill(127);
-                ellipse(this.x, this.y, this.size);
-            }
-        }
-    </script>
-
-    <div class="section">
-        <h2>Work Experience</h2>
+        <h2>Personal Information</h2>
         <ul>
-            <li><strong>Graduate Research Intern</strong> - University of California, Riverside (10/07/2023 – 21/07/2023)</li>
-            <li><strong>Researcher</strong> - 2 years of research experience with Dr. Arpan Deyasi (2021 – 2023)</li>
-            <li><strong>Lab Work</strong> - Sewnarayan Rameswar Fatepuria College (16/06/2018 – 19/08/2021)</li>
-            <li><strong>Project Knowledge Gainer</strong> - Ultrafast and Time-Resolved Spectroscopy, Jadavpur University (12/10/2021 – 18/11/2021)</li>
-            <li><strong>Researcher</strong> - Quantitative Research Design, Eudoxia Research Centre (30/06/2023 – 07/07/2023)</li>
-            <li><strong>Wiki Scientist</strong> - American Physical Society (15/09/2023 – 14/10/2023)</li>
-            <li><strong>Content Moderator</strong> - Social Media (15/12/2023 – 20/12/2024)</li>
-            <li><strong>Customer Service Officer</strong> (18/07/2024 – 28/02/2025)</li>
+            <li><strong>Passport:</strong> Z7395909</li>
+            <li><strong>Date of Birth:</strong> 31/10/1998</li>
+            <li><strong>Place of Birth:</strong> MALDA, India</li>
+            <li><strong>Nationality:</strong> Indian</li>
+            <li><strong>Gender:</strong> Male</li>
+            <li><strong>Phone:</strong> (+91) 7478615259</li>
+            <li><strong>Email:</strong> <a href="mailto:shohilahms.3120@gmail.com">shohilahms.3120@gmail.com</a>, <a href="mailto:mdshohilaktar@yahoo.com">mdshohilaktar@yahoo.com</a>, <a href="mailto:shohilahms.3120@outlook.com">shohilahms.3120@outlook.com</a></li>
+            <li><strong>Facebook:</strong> <a href="https://www.facebook.com/sk.m.aktar.1?mibextid=ZbWKwL">Profile</a></li>
+            <li><strong>WhatsApp:</strong> +917478615259</li>
+            <li><strong>Address:</strong> Kamlabari talgachhi harishchandrapur malda West Bengal India, 732125, Malda, India</li>
         </ul>
     </div>
 
+    <!-- Education and Training -->
     <div class="section">
         <h2>Education and Training</h2>
         <ul>
-            <li><strong>MSc in Physics</strong> - West Bengal State University (24/11/2021 – 30/12/2023)</li>
-            <li><strong>BSc in Physics</strong> - University of Kalyani (11/09/2018 – 17/08/2021)</li>
-            <li><strong>Wiki Scientist Course</strong> - American Physical Society (14/09/2023 – 14/10/2023)</li>
+            <li><strong>MSc Physics:</strong> West Bengal State University (2021-2023)</li>
+            <li><strong>BSc Physics:</strong> University of Kalyani (2018-2021)</li>
+            <li><strong>Wiki Scientist Course:</strong> American Physical Society (2023)</li>
         </ul>
     </div>
 
+    <!-- Work Experience -->
+    <div class="section">
+        <h2>Work Experience</h2>
+        <ul>
+            <li><strong>Graduate Research Intern:</strong> University of California, Riverside (10/07/2023 – 21/07/2023)</li>
+            <li><strong>Researcher:</strong> 2 years with Dr. Arpan Deyasi, Kolkata (2021 – 2023)</li>
+            <li><strong>Lab Work:</strong> Sewnarayan Rameswar Fatepuria College, Murshidabad, India (16/06/2018 – 19/08/2021)</li>
+            <li><strong>Lab Work:</strong> Project Knowledge Gainer in Ultrafast and Time-Resolved Spectroscopy, Jadavpur University (12/10/2021 – 18/11/2021)</li>
+            <li><strong>Researcher:</strong> Eudoxia Research Centre, India (30/06/2023 – 07/07/2023)</li>
+            <li><strong>Wiki Scientist:</strong> American Physical Society (15/09/2023 – 14/10/2023)</li>
+            <li><strong>Content Moderator:</strong> Acharya Prafulla Chandra College, Kolkata (15/12/2023 – 20/12/2024)</li>
+            <li><strong>Customer Service Officer:</strong> (18/07/2024 – 28/02/2025)</li>
+        </ul>
+    </div>
+
+    <!-- Skills -->
     <div class="section">
         <h2>Skills</h2>
-        <ul class="skills-list">
+        <ul>
             <li><strong>Physics:</strong> Quantum Mechanics, Thermodynamics, Optics, Semiconductor Physics</li>
             <li><strong>Programming:</strong> Python (NumPy, SciPy, Matplotlib), MATLAB, C++, LaTeX</li>
-            <li><strong>Data Analysis:</strong> Simulation, Modeling, Data Visualization</li>
-            <li><strong>Soft Skills:</strong> Critical Thinking, Communication, Collaboration, Continuous Learning</li>
+            <li><strong>Languages:</strong> English (C2), Hindi (C2), German (A1), French (A1)</li>
         </ul>
     </div>
 
+    <!-- Digital Skills -->
+    <div class="section">
+        <h2>Digital Skills</h2>
+        <ul>
+            <li><strong>Programming Languages:</strong> Python, MATLAB, C++, Intel 8085</li>
+        </ul>
+    </div>
+
+    <!-- Publications -->
     <div class="section">
         <h2>Publications</h2>
-        <ul class="publications-list">
-            <li>1. Addressing the Hierarchy Problem: Integrating Modified Supersymmetry with Extra-Dimensional Dynamics - Oliver Stabilus, MD Shohil Aktar, Adrian Supersym, Elara Dimensia (ResearchGate, October 2024)</li>
-            <li>2. Exploring the Reality of Parallel Universes: Theoretical Frameworks and Scientific Evidence - Nash Halcyon, Silas Corwin, MD Shohil Aktar (ResearchGate, October 2024)</li>
-            <li>3. A Unified Perspective on Dark Matter and Dark Energy: Integrating Theoretical Physics with Quranic Insights - Elian Rhodes, MD Shohil Aktar (ResearchGate, September 2024)</li>
-            <li>4. New Methods for Detecting Single-Atom Defects in Semiconductors: Enhancing Precision and Performance in Electronic Devices - MD Shohil Aktar (ResearchGate, July 2024)</li>
-            <li>5. The Pre-Big Bang Universe: Theoretical Models and Speculations - MD Shohil Aktar (ResearchGate, June 2024)</li>
-            <li>6. Quantifying Cellular Stiffness and Elasticity through Atomic Force Microscopy: A Biophysical Approach - MD Shohil Aktar (ResearchGate, June 2024)</li>
-            <li>7. How Can Quantum Gravity Help Explain the Origin of the Universe? - MD Shohil Aktar (ResearchGate, June 2024)</li>
-            <li>8. The Arrow of Time: Understanding Its Unidirectional Nature Through Mathematics and Physics - MD Shohil Aktar (ResearchGate, June 2024)</li>
-            <li>9. Is String Theory Correct? An Examination of its Mathematical Foundations and Physical Implications - MD Shohil Aktar (ResearchGate, June 2024)</li>
-            <li>10. Unification of the Universe's Forces - MD Shohil Aktar (ResearchGate, June 2024)</li>
-            <li>11. Are There Parallel Universes? An Exploration of Multiverse Theories and Evidence - MD Shohil Aktar (ResearchGate, May 2024)</li>
-            <li>12. Exploratory Models and Speculative Hypotheses in the Study of Dark Matter and Dark Energy - MD Shohil Aktar (ResearchGate, February 2024)</li>
-            <li>13. A Conceptual Proposal for Unifying Quantum Field Theory and General Relativity into a Theory of Everything - MD Shohil Aktar (ResearchGate, February 2024)</li>
-            <li>14. Analysis of Heterostructure MOSFET Properties for Improved Device Performance - MD Shohil Aktar, Dr. Arpan Deyasi (TIJER Technix International Journal for Engineering Research, September 2023)</li>
-            <li>15. Sustainable Redevelopment of the Volve Field Amidst Recent Energy Security Challenges in Northwestern Europe - MD Shohil Aktar, M. Nauroz Ahmad, M. Yaser, M . Abdel-Basset, R. Abdelrahim, E. Siddique, M. E. Abdelbagi, B. Firmansyah (ResearchGate, August 2023)</li>
-            <li>16. Effect of Ceramic Reinforcement on the Microstructural, Mechanical, and Tribological Behavior of Al-Cu Alloy Metal Matrix Composites - MD Shohil Aktar, Aktar Zahid Sohag, Pallav Gupta, Neha Kondal, Devendra Kumar, Neera Singh, Anbesh Jamwal (ScienceDirect, September 2019)</li>
-            <li>17. Comparative Study of Changing Pattern of Temperature for Various Periods of Time - Kamalesh Chandra Roy, MD Shohil Aktar (IOSR Journal of Mathematics, February 2017)</li>
-            <li>18. Solar System Effects in Schwarzschild Space-Time - Kamalesh Chandra Roy, MD Shohil Aktar (IOSR Journal of Mathematics, February 2017)</li>
-            <li>19. Analytic Approach in Solving Steady Laminar Flow of Fluid over a Stretching Sheet in Presence of a Magnetic Field - Md Al-Amin, Kamalesh Chandra Roy, MD Shohil Aktar (IOSR Journal of Mathematics, June 2016)</li>
-            <li>20. Simple But Comprehensive Study on Cloud Storage - Md. Tuhin Reza, MD Shohil Aktar, Md. Alam Hossain (International Journal of Advanced Research in Computer Science and Software Engineering, March 2016)</li>
-            <li>21. B.10 Yer Mühendislik Terimleri Sözlüğü - Kemal Onder Cetin, R. Ulusay, Mehmet Ekmekci, Hasan Gercek, MD Shohil Aktar (ResearchGate, January 2011)</li>
+        <ul>
+            <li>Analysis of Heterostructure MOSFET Properties for Improved Device Performance (2023)</li>
+            <li>Effect of Ceramic Reinforcement on Al-Cu Alloy Metal Matrix Composite (2019)</li>
+            <li>Comparative Study of Changing Pattern of Temperature (2017)</li>
+            <li>Simple But Comprehensive Study on Cloud Storage (2016)</li>
+            <li>Solar System Effects in Schwarzschild Space Time (2017)</li>
         </ul>
     </div>
 
+    <!-- Certifications -->
     <div class="section">
         <h2>Certifications</h2>
-        <ul class="certifications-list">
-            <li>Design and Application of SPSS Software - Eudoxia Research Centre</li>
-            <li>Nanotechnology Lecture - Nehru Science Centre, Mumbai</li>
-            <li>National Intellectual Property Awareness Mission</li>
-            <li>Two National Level Seminars on Recent Trends in Physics - Acharya Prafulla Chandra College</li>
-            <li>One Day National Seminar on Nanoscience and Astrophysics - Acharya Prafulla Chandra College</li>
-            <li>Wiki Scientist Course - American Physical Society (14/10/2023)</li>
-            <li>APS GERA Energy Workshop - American Physical Society (08/03/2024)</li>
-            <li>GEC 2024 - University of California, Berkeley (14/07/2024)</li>
+        <ul>
+            <li>Wiki Scientist Course – American Physical Society (2023)</li>
+            <li>APS GERA Energy Workshop (2024)</li>
+            <li>GEC 2024 – University of California, Berkeley (2024)</li>
         </ul>
     </div>
 
+    <!-- Networks and Memberships -->
     <div class="section">
         <h2>Networks and Memberships</h2>
         <ul>
-            <li>American Physical Society (10/10/2021 – Current)</li>
-            <li>The American Society of Mechanical Engineers (11/08/2021 – Current)</li>
+            <li><strong>American Physical Society:</strong> Member (2021-Present)</li>
+            <li><strong>The American Society of Mechanical Engineers:</strong> Member (2021-Present</li>
         </ul>
     </div>
 
+    <!-- Conferences and Seminars -->
     <div class="section">
-        <h2>Hobbies and Interests</h2>
-        <p>Reading, Writing, Cricket, Football</p>
+        <h2>Conferences and Seminars</h2>
+        <ul>
+            <li><strong>Certification for Design and Application of SPSS Software:</strong> Eudoxia Research Centre</li>
+            <li><strong>Attendance Certification for Nanotechnology Lecture:</strong> Nehru Science Centre, Mumbai (Topic: Unleashing the Power of Nanotechnology)</li>
+            <li><strong>Certificate for Participation in National Intellectual Property Awareness Mission</strong></li>
+            <li><strong>Certificate for Participation in Two National Level Seminars on Recent Trends in Physics:</strong> Acharya Prafulla Chandra College</li>
+            <li><strong>Certificate for One-Day National Seminar on Nanoscience and Astrophysics:</strong> Acharya Prafulla Chandra College</li>
+        </ul>
     </div>
 
+    <!-- Honours and Awards -->
     <div class="section">
-        <h2>Creative Works</h2>
-        <p>Lead researcher in heterostructure MOSFET optimization, using MATLAB simulations to enhance device performance and lifespan, achieving up to 20% improvement, and collaborating with experts for experimental validation.</p>
+        <h2>Honours and Awards</h2>
+        <ul>
+            <li><strong>Wiki Scientist Course:</strong> American Physical Society (14/10/2023)</li>
+            <li><strong>APS GERA Energy Workshop:</strong> APS GERA Energy Workshop (08/03/2024)</li>
+            <li><strong>GEC 2024:</strong> University of California, Berkeley (14/07/2024)</li>
+            <li><strong>APS GERA Energy Workshop:</strong> American Physical Society (21/12/2024)</li>
+        </ul>
     </div>
+
+    <!-- Hobbies and Interests -->
+    <div class="section">
+        <h2>Hobbies and Interests</h2>
+        <ul>
+            <li>Reading, Writing, Cricket, Football</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Md Shohil Aktar. All rights reserved.</p>
+    </footer>
 </body>
 </html>
