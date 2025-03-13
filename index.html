@@ -76,17 +76,10 @@
         .contact-info a:hover {
             background: #1e7e34; /* Even darker green */
         }
-        .progress {
-            background-color: #f3f3f3;
-            border-radius: 5px;
-            margin: 10px 0;
-        }
-        .progress-bar {
-            height: 20px;
-            border-radius: 5px;
-            text-align: center;
-            color: white;
-            line-height: 20px; /* Center text vertically */
+        #canvas-container {
+            width: 100%;
+            height: 400px;
+            margin: 20px 0;
         }
     </style>
 </head>
@@ -101,6 +94,12 @@
             <a href="https://orcid.org/0009-0003-8253-4531">ORCID</a>
         </div>
     </header>
+
+    <!-- Physics Visualization -->
+    <div class="section">
+        <h2>Physics Visualization</h2>
+        <div id="canvas-container"></div>
+    </div>
 
     <!-- Personal Information -->
     <div class="section">
@@ -191,7 +190,8 @@
                 <ol>
                     <li>Addressing the Hierarchy Problem: Integrating Modified Supersymmetry with Extra-Dimensional Dynamics (October 2024)</li>
                     <li>Exploring the Reality of Parallel Universes: Theoretical Frameworks and Scientific Evidence (October 2024)</li>
-                    <li>A Unified Perspective on Dark Matter and Dark Energy: Integrating Theoretical Physics with Quranic Insights (September 2024)</li <li>New Methods for Detecting Single-Atom Defects in Semiconductors: Enhancing Precision and Performance in Electronic Devices (July 2024)</li>
+                    <li>A Unified Perspective on Dark Matter and Dark Energy: Integrating Theoretical Physics with Quranic Insights (September 2024)</li>
+                    <li>New Methods for Detecting Single-Atom Defects in Semiconductors: Enhancing Precision and Performance in Electronic Devices (July 2024)</li>
                     <li>The Pre-Big Bang Universe: Theoretical Models and Speculations (June 2024)</li>
                     <li>Quantifying Cellular Stiffness and Elasticity through Atomic Force Microscopy: A Biophysical Approach (June 2024)</li>
                     <li>How Can Quantum Gravity Help Explain the Origin of the Universe? (June 2024)</li>
@@ -258,7 +258,7 @@
         <h2>Conferences and Seminars</h2>
         <ul>
             <li><strong>Certification for Design and Application of SPSS Software:</strong> Eudoxia Research Centre</li>
-            <li><strong>Attendance Certification for Nanotechnology Lecture:</strong> Nehru Science Centre, Mumbai (Topic: Unleashing the Power of Nanotechnology)</li>
+            <li><strong>Attendance Certification for Nanotechnology Lecture:</strong> Nehru Science Centre , Mumbai (Topic: Unleashing the Power of Nanotechnology)</li>
             <li><strong>Certificate for Participation in National Intellectual Property Awareness Mission</strong></li>
             <li><strong>Certificate for Participation in Two National Level Seminars on Recent Trends in Physics:</strong> Acharya Prafulla Chandra College</li>
             <li><strong>Certificate for One-Day National Seminar on Nanoscience and Astrophysics:</strong> Acharya Prafulla Chandra College</li>
@@ -287,5 +287,40 @@
     <footer>
         <p>&copy; 2023 Md Shohil Aktar. All rights reserved.</p>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, 400);
+        document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+        const geometry = new THREE.SphereGeometry(1, 32, 32);
+        const material = new THREE.MeshBasicMaterial({ color: 0x0077ff });
+        const ball = new THREE.Mesh(geometry, material);
+        scene.add(ball);
+
+        ball.position.y = 0;
+
+        const gravity = -0.1;
+        let velocity = 0;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            velocity += gravity;
+            ball.position.y += velocity;
+
+            if (ball.position.y <= 1) {
+                ball.position.y = 1;
+                velocity *= -0.8; // bounce effect
+            }
+
+            renderer.render(scene, camera);
+        }
+
+        camera.position.z = 5;
+        animate();
+    </script>
 </body>
 </html>
