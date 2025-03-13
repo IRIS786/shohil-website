@@ -3,96 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md Shohil Aktar</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Md Shohil Aktar | Homepage</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Header Section -->
     <header>
-        <h1>Md Shohil Aktar</h1>
+        <h1>Md Shohil Aktar's Homepage</h1>
         <nav>
             <ul>
                 <li><a href="#research">Research</a></li>
                 <li><a href="#teaching">Teaching</a></li>
                 <li><a href="#talks">Talks</a></li>
-                <li><a href="#software">Software</a></li>
                 <li><a href="#people">People</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-
-    <!-- Research Section -->
-    <section id="research">
-        <h2>Research</h2>
-        <p>I have conducted extensive research in the field of electronic devices and circuits, focusing on the fabrication and characterization of nanostructured electronic devices. My work includes the study of semiconductor materials for high-efficiency solar cells and the development of thin-film transistors.
-
-During my academic journey, I have contributed to multiple publications in reputed journals and presented my findings at international conferences. My research involves material synthesis, structural characterization, and performance evaluation using advanced spectroscopy techniques. I am passionate about exploring innovative technologies to enhance the efficiency and reliability of electronic systems.</p>
-
-        <div class="research-item">
-            <h3>Title of Your Research</h3>
-            <p><strong>Institution:</strong> Your University/Institution Name</p>
-            <p><strong>Duration:</strong> Start Date – End Date</p>
-            <p><strong>Supervisor:</strong> Name of Your Research Supervisor</p>
-            <p><strong>Description:</strong> Briefly describe your research work, objectives, and findings.</p>
-        </div>
-
-        <div class="research-item">
-            <h3>Another Research Project</h3>
-            <p><strong>Institution:</strong> Another University/Institution</p>
-            <p><strong>Duration:</strong> Start Date – End Date</p>
-            <p><strong>Supervisor:</strong> Supervisor's Name</p>
-            <p><strong>Description:</strong> Summary of this research project.</p>
-        </div>
-
-        <h3>Publications</h3>
-        <ul>
-            <li><strong>Paper Title 1</strong> – Journal/Conference Name, Year, DOI</li>
-            <li><strong>Paper Title 2</strong> – Journal/Conference Name, Year, DOI</li>
-            <li><strong>Paper Title 3</strong> – Journal/Conference Name, Year, DOI</li>
-        </ul>
-    </section>
-
-    <!-- Teaching Section -->
-    <section id="teaching">
-        <h2>Teaching</h2>
-        <p>Details about teaching experience and courses taught.</p>
-    </section>
-
-    <!-- Talks Section -->
-    <section id="talks">
-        <h2>Talks</h2>
-        <p>Information about invited talks and presentations.</p>
-    </section>
-
-    <!-- Software Section -->
-    <section id="software">
-        <h2>Software</h2>
-        <p>Details about software and tools developed.</p>
-    </section>
-
-    <!-- People Section -->
-    <section id="people">
-        <h2>People</h2>
-        <p>Collaborators, research group, and students.</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Connect with me:</p>
-        <ul>
-            <li><a href="https://www.researchgate.net" target="_blank">ResearchGate</a></li>
-            <li><a href="https://scholar.google.com" target="_blank">Google Scholar</a></li>
-            <li><a href="https://orcid.org" target="_blank">ORCID</a></li>
-        </ul>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Md Shohil Aktar. All rights reserved.</p>
-    </footer>
-
+    <main>
+        <aside>
+            <img src="profile.jpg" alt="Md Shohil Aktar">
+            <h2>Md Shohil Aktar</h2>
+            <p>MSc Physics Graduate</p>
+            <a href="#" class="button">The University of Hong Kong</a>
+            <a href="#" class="button">ResearchGate</a>
+            <a href="#" class="button">Google Scholar</a>
+            <a href="#" class="button">ORCID</a>
+        </aside>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am an MSc Physics graduate with research experience and multiple publications. My work focuses on [your key research areas].</p>
+            <a href="CV_AKTAR.pdf" class="button">Download CV</a>
+        </section>
+        <section id="research">
+            <h2>Research</h2>
+            <p>Details about research work.</p>
+        </section>
+        <section id="teaching">
+            <h2>Teaching</h2>
+            <p>Teaching experience and courses.</p>
+        </section>
+        <section id="talks">
+            <h2>Talks</h2>
+            <p>Conferences and presentations.</p>
+        </section>
+        <section id="people">
+            <h2>People</h2>
+            <p>Collaborators and team members.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
