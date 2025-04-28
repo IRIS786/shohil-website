@@ -10,7 +10,7 @@ header {
     color: white;
     padding: 15px 20px;
     text-align: center;
-    position: fixed;
+    position: relative;
     width: 100%;
     top: 0;
     z-index: 1000;
